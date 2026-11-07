@@ -18,6 +18,9 @@ overrides:
   'extract-zip>yauzl': '3.4.0'
   '@deepseek-ai/cosmokit': 'link:vendor/cosmokit'
   '@deepseek-ai/schemastery': 'link:vendor/schemastery'
+  # cdn.sheetjs.com is unreachable from some networks; pkg/ tracks the reviewed
+  # upstream tarball (identical sha512 to the CDN artifact in the lockfile).
+  'xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz': 'file:pkg/xlsx-0.20.3.tgz'
 
 peerDependencyRules:
   allowedVersions:
